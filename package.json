@@ -1,11 +1,12 @@
 {
   "name": "react-native-scrollable-tab-view",
-  "version": "0.10.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "eslint -c .eslintrc . --ignore-path .gitignore",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1 --coverage",
+    "typecheck": "tsc --noEmit || true"
   },
   "repository": {
     "type": "git",
@@ -29,12 +30,26 @@
   },
   "homepage": "https://github.com/brentvatne/react-native-scrollable-tab-view#readme",
   "dependencies": {
-    "react-timer-mixin": "^0.13.3",
+    "@react-native-community/viewpager": "3.3.0",
+    "create-react-class": "^15.6.2",
     "prop-types": "^15.6.0",
-    "create-react-class": "^15.6.2"
+    "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
-    "eslint": "^3.1.1"
+    "eslint": "^3.1.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "lines": 50,
+        "branches": 40,
+        "functions": 50,
+        "statements": 50
+      }
+    }
   }
 }

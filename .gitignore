@@ -4,3 +4,9 @@ node_modules/
 .idea/
 .reploy
 .DS_Store
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+!.env.sample
